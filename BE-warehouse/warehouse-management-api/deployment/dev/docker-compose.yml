@@ -1,0 +1,44 @@
+services:
+
+  db:
+    image: postgres:15
+    container_name: warehouse_mgmt_db
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - dev.env
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7
+    container_name: warehouse_mgmt_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  api:
+    image: warehouse_mgmt_api:latest
+    container_name: warehouse_mgmt_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      RUN_MAIN_SERVICE: "true"
+      RUNNING_IN_DOCKER: "True"
+    env_file:
+      - dev.env
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+volumes:
+  postgres_data:

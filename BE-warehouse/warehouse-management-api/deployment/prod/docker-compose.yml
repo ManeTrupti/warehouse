@@ -1,0 +1,25 @@
+services:
+
+  redis:
+    image: redis:7
+    container_name: warehouse_mgmt_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  api:
+    image: warehouse_mgmt_api:latest
+    container_name: warehouse_mgmt_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      RUN_MAIN_SERVICE: "true"
+      RUNNING_IN_DOCKER: "True"
+    env_file:
+      - prod.env
+    depends_on:
+      redis:
+        condition: service_started
+
+

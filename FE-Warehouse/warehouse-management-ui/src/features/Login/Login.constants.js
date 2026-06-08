@@ -1,0 +1,1 @@
+export const LOGIN_BG_IMAGE = "/login-bg.jpg";

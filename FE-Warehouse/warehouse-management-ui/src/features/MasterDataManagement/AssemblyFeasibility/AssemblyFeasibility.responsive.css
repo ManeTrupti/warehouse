@@ -1,0 +1,95 @@
+/* Assembly Feasibility responsive layout */
+.assembly-feasibility-page {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .assembly-feasibility-page {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.assembly-feasibility-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+  .assembly-feasibility-header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.assembly-feasibility-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+  .assembly-feasibility-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .assembly-feasibility-cards-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    padding-top: 0.75rem;
+  }
+}
+
+.assembly-feasibility-table-wrap {
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .assembly-feasibility-table-wrap {
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.assembly-feasibility-bottleneck-section {
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .assembly-feasibility-bottleneck-section {
+    padding: 1rem;
+  }
+}
+
+.assembly-feasibility-bottleneck-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 1023px) {
+  .assembly-feasibility-bottleneck-cards {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .assembly-feasibility-bottleneck-cards {
+    grid-template-columns: 1fr;
+  }
+}

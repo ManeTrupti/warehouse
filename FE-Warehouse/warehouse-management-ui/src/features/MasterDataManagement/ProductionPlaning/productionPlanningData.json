@@ -1,0 +1,25 @@
+{
+  "lines": ["All Lines", "Line 1", "Line 2", "Line 3"],
+  "assemblyPlans": [
+    { "id": "1", "model": "8046", "totalPlan": 100, "shift1": 20, "shift2": 25, "shift3": 25, "status": "published" },
+    { "id": "2", "model": "8043", "totalPlan": 150, "shift1": 30, "shift2": 30, "shift3": 30, "status": "published" },
+    { "id": "3", "model": "8033", "totalPlan": 90, "shift1": 30, "shift2": 30, "shift3": 30, "status": "published" }
+  ],
+  "childPartRequirements": [
+    { "department": "Piston Hard", "childPart": "Piston 8046", "forModels": "8046", "requiredQty": 100 },
+    { "department": "Housing", "childPart": "Housing 8046", "forModels": "8046", "requiredQty": 100 },
+    { "department": "Section Shaft", "childPart": "Shaft 8046", "forModels": "8046", "requiredQty": 100 },
+    { "department": "Hydraulic Centering", "childPart": "Valve Bush 8046", "forModels": "8046", "requiredQty": 100 },
+    { "department": "Worm Nut", "childPart": "Worm Nut 8046", "forModels": "8046", "requiredQty": 100 },
+    { "department": "Piston Hard", "childPart": "Piston 8043", "forModels": "8043", "requiredQty": 150 },
+    { "department": "Housing", "childPart": "Housing 8043", "forModels": "8043", "requiredQty": 150 },
+    { "department": "Section Shaft", "childPart": "Shaft 8043", "forModels": "8043", "requiredQty": 150 },
+    { "department": "Hydraulic Centering", "childPart": "Valve Bush 8043", "forModels": "8043", "requiredQty": 150 },
+    { "department": "Worm Nut", "childPart": "Worm Nut 8043", "forModels": "8043", "requiredQty": 150 },
+    { "department": "Piston Hard", "childPart": "Piston 8033", "forModels": "8033", "requiredQty": 90 },
+    { "department": "Housing", "childPart": "Housing 8033", "forModels": "8033", "requiredQty": 90 },
+    { "department": "Section Shaft", "childPart": "Shaft 8033", "forModels": "8033", "requiredQty": 90 },
+    { "department": "Hydraulic Centering", "childPart": "Valve Bush 8033", "forModels": "8033", "requiredQty": 90 },
+    { "department": "Worm Nut", "childPart": "Worm Nut 8033", "forModels": "8033", "requiredQty": 90 }
+  ]
+}

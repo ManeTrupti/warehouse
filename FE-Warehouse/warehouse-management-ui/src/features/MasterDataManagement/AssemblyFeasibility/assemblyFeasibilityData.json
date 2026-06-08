@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "totalPlanned": 340,
+    "readyToAssemble": 227,
+    "bottlenecks": 3,
+    "overallFeasibilityPercent": 66.8
+  },
+  "shifts": ["Shift 1", "Shift 2"],
+  "models": [
+    {
+      "model": "8046",
+      "planned": 180,
+      "feasible": 128,
+      "shortage": -52,
+      "bottleneckPart": "Valve Bush 8046",
+      "bottleneckDepartment": "Hydraulic Centering",
+      "feasibilityPercent": 48
+    },
+    {
+      "model": "8043",
+      "planned": 150,
+      "feasible": 95,
+      "shortage": -55,
+      "bottleneckPart": "Piston 8043",
+      "bottleneckDepartment": "Piston Hard",
+      "feasibilityPercent": 63
+    },
+    {
+      "model": "8033",
+      "planned": 90,
+      "feasible": 84,
+      "shortage": -6,
+      "bottleneckPart": "Piston 8033",
+      "bottleneckDepartment": "Piston Hard",
+      "feasibilityPercent": 93
+    }
+  ],
+  "bottleneckDetails": [
+    {
+      "model": "8046",
+      "totalShortUnits": 52,
+      "parts": [
+        {
+          "part": "Piston 8046",
+          "department": "Piston Hard",
+          "feasible": 93,
+          "planned": 100,
+          "short": 7
+        },
+        {
+          "part": "Housing 8046",
+          "department": "Housing",
+          "feasible": 95,
+          "planned": 100,
+          "short": 5
+        },
+        {
+          "part": "Shaft 8046",
+          "department": "Section Shaft",
+          "feasible": 94,
+          "planned": 100,
+          "short": 6
+        },
+        {
+          "part": "Valve Bush 8046",
+          "department": "Hydraulic Centering",
+          "feasible": 48,
+          "planned": 100,
+          "short": 52
+        }
+      ]
+    },
+    {
+      "model": "8043",
+      "totalShortUnits": 55,
+      "parts": [
+        {
+          "part": "Piston 8043",
+          "department": "Piston Hard",
+          "feasible": 95,
+          "planned": 150,
+          "short": 55
+        },
+        {
+          "part": "Housing 8043",
+          "department": "Housing",
+          "feasible": 105,
+          "planned": 150,
+          "short": 45
+        },
+        {
+          "part": "Valve Bush 8043",
+          "department": "Hydraulic Centering",
+          "feasible": 142,
+          "planned": 150,
+          "short": 8
+        }
+      ]
+    },
+    {
+      "model": "8033",
+      "totalShortUnits": 6,
+      "parts": [
+        {
+          "part": "Piston 8033",
+          "department": "Piston Hard",
+          "feasible": 84,
+          "planned": 90,
+          "short": 6
+        },
+        {
+          "part": "Housing 8033",
+          "department": "Housing",
+          "feasible": 87,
+          "planned": 90,
+          "short": 3
+        }
+      ]
+    }
+  ]
+}
+

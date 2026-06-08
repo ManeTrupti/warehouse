@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "totalParts": 15,
+    "complete": 6,
+    "onTrack": 6,
+    "atRisk": 2,
+    "behind": 1
+  },
+  "departments": ["All Departments", "Piston Hard", "Housing", "Section Shaft", "Hydraulic Centering", "Worm Nut"],
+  "rows": [
+    { "id": "1", "status": "complete", "department": "Piston Hard", "childPart": "Piston 8046", "forModels": "8046", "planned": 100, "produced": 100, "pending": 0, "progress": 100 },
+    { "id": "2", "status": "on_track", "department": "Housing", "childPart": "Housing 8046", "forModels": "8046", "planned": 100, "produced": 93, "pending": 7, "progress": 93 },
+    { "id": "3", "status": "on_track", "department": "Section Shaft", "childPart": "Shaft 8046", "forModels": "8046", "planned": 100, "produced": 98, "pending": 2, "progress": 98 },
+    { "id": "4", "status": "complete", "department": "Hydraulic Centering", "childPart": "Valve Bush 8046", "forModels": "8046", "planned": 100, "produced": 99, "pending": 1, "progress": 99 },
+    { "id": "5", "status": "complete", "department": "Worm Nut", "childPart": "Worm Nut 8046", "forModels": "8046", "planned": 100, "produced": 100, "pending": 0, "progress": 100 },
+    { "id": "6", "status": "at_risk", "department": "Piston Hard", "childPart": "Piston 8043", "forModels": "8043", "planned": 150, "produced": 93, "pending": 57, "progress": 62 },
+    { "id": "7", "status": "at_risk", "department": "Housing", "childPart": "Housing 8043", "forModels": "8043", "planned": 150, "produced": 105, "pending": 45, "progress": 70 },
+    { "id": "8", "status": "on_track", "department": "Section Shaft", "childPart": "Shaft 8041", "forModels": "8041", "planned": 90, "produced": 59, "pending": 31, "progress": 65 },
+    { "id": "9", "status": "behind", "department": "Hydraulic Centering", "childPart": "Valve Bush 8043", "forModels": "8043", "planned": 100, "produced": 48, "pending": 52, "progress": 48 },
+    { "id": "10", "status": "on_track", "department": "Worm Nut", "childPart": "Worm Nut 8045", "forModels": "8045", "planned": 120, "produced": 84, "pending": 36, "progress": 70 },
+    { "id": "11", "status": "complete", "department": "Piston Hard", "childPart": "Piston 8033", "forModels": "8033", "planned": 80, "produced": 80, "pending": 0, "progress": 100 },
+    { "id": "12", "status": "on_track", "department": "Housing", "childPart": "Housing 8053", "forModels": "8053", "planned": 95, "produced": 67, "pending": 28, "progress": 71 },
+    { "id": "13", "status": "complete", "department": "Section Shaft", "childPart": "Shaft 8033", "forModels": "8033", "planned": 80, "produced": 78, "pending": 2, "progress": 98 },
+    { "id": "14", "status": "complete", "department": "Hydraulic Centering", "childPart": "Hydraulic Centering 8033", "forModels": "8033", "planned": 80, "produced": 76, "pending": 4, "progress": 95 },
+    { "id": "15", "status": "on_track", "department": "Worm Nut", "childPart": "Worm Nut 8033", "forModels": "8033", "planned": 80, "produced": 72, "pending": 8, "progress": 90 }
+  ]
+}

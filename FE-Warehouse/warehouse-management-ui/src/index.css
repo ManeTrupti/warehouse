@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Legacy tenant variables (for backward compatibility) */
+  --tenant-primary: #2563eb;
+  --tenant-secondary: #64748b;
+  --tenant-accent: #0ea5e9;
+
+  /* Theme variables (set by ThemeProvider) - Matching Production Planning Dashboard */
+  --theme-primary: #2563eb;
+  --theme-secondary: #f97316;
+  --theme-accent: #0ea5e9;
+
+  /* Dashboard-specific colors */
+  --theme-primary-dark: #1e3a8a;
+  --theme-primary-light: #3b82f6;
+  --theme-secondary-light: #fb923c;
+  --theme-accent-light: #38bdf8;
+  --theme-success: #22c55e;
+  --theme-error: #ef4444;
+  --theme-error-light: #fee2e2;
+
+  /* Background colors */
+  --theme-bg-page: #f3f4f6;
+  --theme-bg-card: #ffffff;
+  --theme-bg-header: #1e3a8a;
+
+  /* Sidebar colors */
+  --theme-sidebar-bg: rgb(237 236 236 / 77%);
+  --theme-sidebar-active-bg: #ffffff;
+  --theme-sidebar-active-border: #d4d4d4;
+  --theme-sidebar-text: #2f2f2f;
+  --theme-surface-muted: #f8fafc;
+  --theme-border: #e2e8f0;
+  --theme-ring: #bfdbfe;
+}
+
+body {
+  background-color: var(--theme-bg-page);
+  color: #0f172a;
+}
+
+/* Search input placeholder styling */
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Smooth scrollbar for sidebar */
+aside::-webkit-scrollbar {
+  width: 6px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hide number input spinners (Shift 1/2/3 in Production Planning) */
+.shift-qty-input::-webkit-inner-spin-button,
+.shift-qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.shift-qty-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Common loader – spinner (ring) */
+@keyframes common-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.common-loader-spinner {
+  animation: common-loader-spin 0.8s linear infinite;
+  will-change: transform;
+}
+
+/* Common loader – bouncing dots */
+@keyframes common-loader-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-0.4em) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.common-loader-dot {
+  animation: common-loader-bounce 1.4s ease-in-out infinite both;
+  border-radius: 50%;
+}
+
+.common-loader-dot:nth-child(1) { animation-delay: 0s; }
+.common-loader-dot:nth-child(2) { animation-delay: 0.16s; }
+.common-loader-dot:nth-child(3) { animation-delay: 0.32s; }
+
+/* Common skeleton shimmer animation */
+@keyframes common-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.common-skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-base, #f3f4f6) 0%,
+    var(--skeleton-highlight, #e5e7eb) 50%,
+    var(--skeleton-base, #f3f4f6) 100%
+  );
+  background-size: 200% 100%;
+  animation: common-skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@layer components {
+  .btn {
+    @apply rounded-lg border border-indigo-500 bg-indigo-500 text-white shadow-sm transition-colors;
+  }
+  .btn:hover {
+    @apply border-indigo-600 bg-indigo-600;
+  }
+  .chart-bar- {
+    @apply text-[linear-gradient(135deg,rgba(255,255,255,0.18)_0%,transparent_40%,rgba(255,255,255,0.08)_100%),linear-gradient(135deg,#6366F1,#8B5CF6)];
+    @apply bg-clip-text text-transparent;
+  }
+
+  .app-surface-card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .app-muted-surface {
+    @apply rounded-xl border border-slate-200 bg-slate-50;
+  }
+
+  .common-modal-footer > button {
+    @apply rounded-lg px-5 py-2 text-sm font-semibold;
+  }
+}

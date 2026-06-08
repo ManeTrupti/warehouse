@@ -1,0 +1,66 @@
+/* Child-Part Readiness responsive layout */
+.child-part-readiness-page {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .child-part-readiness-page {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.child-part-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+  .child-part-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.child-part-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+  .child-part-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .child-part-cards-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    padding-top: 0.75rem;
+  }
+}
+
+.child-part-table-wrap {
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .child-part-table-wrap {
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
